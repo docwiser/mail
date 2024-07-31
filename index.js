@@ -48,6 +48,9 @@ socket.on('disconnect', () => {
 console.log('A user disconnected:', socket.id);
 });
 });
+app.get('/', (req, res) => {
+res.json({success: 200});
+});
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
 console.log(`Server running on port ${PORT}`);
